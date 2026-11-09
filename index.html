@@ -163,7 +163,7 @@ function ordRender(q){
   $("nx").textContent="عرض النتيجة";$("nx").classList.remove("hide")};
  op.appendChild(c);
 }
-$("nx").onclick=()=>{if(i+1<g.q.length){i++;turn()}else finish()};
+$("nx").onclick=()=>{if(!g.dd&&i+1<g.q.length){i++;turn()}else finish()};
 function finish(){
   S[g.id]=Math.max(S[g.id]||0,pts);save();show("end");
   const r=pts/g.q.length,n=$("nm").value.trim();
